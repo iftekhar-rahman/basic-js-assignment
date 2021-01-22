@@ -24,7 +24,27 @@ function budgetCalculator(watch, phone, laptop){
 var resutl = budgetCalculator(3);
 console.log(resutl);
 
-
+/*-------Third Problem - Hotel Cost--------*/
+function hotelCost(days){
+    var cost = 0;
+    if(days <= 10){
+        cost = days * 100;
+    } else if(days <= 20){
+        var firstTenDays = 10 * 100;
+        var discountCost = days - 10;
+        var secondTenDays = discountCost * 80;
+        cost = firstTenDays + secondTenDays;
+    } else{
+        var firstTenDays = 10 * 100;
+        var secondTenDays = 10 * 80;
+        var discountCost = days - 20;
+        var afterTDays = discountCost * 50;
+        cost = firstTenDays + secondTenDays + afterTDays;
+    }
+    return cost;
+}
+var result = hotelCost(55);
+console.log(result);
 
 /*-------Fourth Problem - Mega Friend --------*/
 var names = ["Rahim", "Karim", "Abdullah", "Kiron Rahman", "Malek"];
